@@ -7,10 +7,15 @@ contract AluguelContract {
     string public nomeLocatario;
     uint256 [] public valoresAluguel;
 
-    constructor(string memory _nomeLocador, string memory _nomeLocatorio, uint256 [] memory _valoresAluguel) {
+    constructor(string memory _nomeLocador, string memory _nomeLocatorio, uint256 valorInicialAluguel) {
         nomeLocador = _nomeLocador;
         nomeLocatario = _nomeLocatorio;
-        valoresAluguel = _valoresAluguel;
+       // valoresAluguel = _valoresAluguel;
+
+        for (uint i = 0; i < 36; i++) 
+        {
+            valoresAluguel[i] = valorInicialAluguel;
+        }
     }
 
 	function valorAluguelPorMes(uint numeroMes) public view returns (uint256) {
@@ -43,6 +48,3 @@ contract AluguelContract {
 	}
 
 }
-
-
-//0x23Adcb2b3bEa7e911ddD4349575dcb450c382ceB
