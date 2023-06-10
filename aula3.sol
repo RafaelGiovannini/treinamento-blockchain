@@ -14,7 +14,7 @@ contract AluguelContract {
 
         for (uint i = 0; i < 36; i++) 
         {
-            valoresAluguel[i] = valorInicialAluguel;
+            valoresAluguel.push(valorInicialAluguel);
         }
     }
 
