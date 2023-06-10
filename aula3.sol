@@ -14,7 +14,7 @@ contract AluguelContract {
     }
 
 	function valorAluguelPorMes(uint numeroMes) public view returns (uint256) {
-        return valoresAluguel[numeroMes];
+        return valoresAluguel[numeroMes-1];
 	}
 	
 	function participantesName() public view returns (string memory, string memory) {
