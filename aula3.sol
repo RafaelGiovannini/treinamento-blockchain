@@ -43,3 +43,6 @@ contract AluguelContract {
 	}
 
 }
+
+
+//0x23Adcb2b3bEa7e911ddD4349575dcb450c382ceB
