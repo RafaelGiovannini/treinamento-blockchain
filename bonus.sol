@@ -7,18 +7,13 @@ contract BonusContract {
     uint256 public bonus;
 
     constructor(string memory nomeVendedor,uint256 valorBonus) {
-        nomeVendedor = nomeVendedor;
-        valorBonus = valorBonus;
+        vendedor = nomeVendedor;
+        bonus = valorBonus;
     }
 
-	function getBonus(uint256 valorVenda) public pure returns (uint256 valorBonus) {
-
-        if(valorVenda <= 50){
-            return valorVenda * 50;
-        }else{
-            return  valorVenda * 100;
-        }
+	function getBonus(uint256 valorVenda) public view returns (uint256 valorTotalBonus) {
+        return  valorVenda * bonus;
 	}
 	
 }
-//0x96A51509049FCf655A300fae78E046C3261f801E
+
