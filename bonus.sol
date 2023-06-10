@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
 
-contract Example7CommContract {
+contract BonusContract {
 
     string public vendedor;
     uint256 private bonus;
@@ -11,7 +11,7 @@ contract Example7CommContract {
         valorBonus = valorBonus;
     }
 
-	function getBonus() public pure returns (uint256 valorVenda) {
+	function getBonus(uint256 valorVenda) public pure returns (uint256 valorBonus) {
 
         if(valorVenda <= 50){
             return valorVenda * 50;
